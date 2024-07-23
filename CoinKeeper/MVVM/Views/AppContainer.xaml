@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="CoinKeeper.MVVM.Views.AppContainer"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:views="clr-namespace:CoinKeeper.MVVM.Views"
+    Title=""
+    Shell.NavBarIsVisible="False">
+    <TabbedPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="Transparent" StatusBarStyle="DarkContent" />
+    </TabbedPage.Behaviors>
+    <NavigationPage Title="Dashboard">
+        <x:Arguments>
+            <views:DashboardPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <views:StatisticsPage Title="Statistics" />
+</TabbedPage>
